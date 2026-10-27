@@ -1,0 +1,26 @@
+/* Hint: مرح وأنثوي الإحساس. مرجاني وعنابي، حواف مدورة جداً، بطاقات متراصة ملونة مائلة قليلاً. */
+:root{--bg:#fff0e8;--hero:#eb815f;--hero-ink:#6b0f35;--ink:#5a1230;--muted:#a45a6a;--card:#ffffff;--card-ink:#5a1230;--line:rgb(107 15 53 / .16);--accent:#8e1a4a;--accent-ink:#ffffff;--radius:30px;--f-head:"Lalezar","Readex Pro",sans-serif;--top-bg:#fff0e8}
+.hero{padding-bottom:70px}
+.hero::after{content:"";position:absolute;inset:auto 0 -1px 0;height:70px;background:radial-gradient(60px 36px at 60px 70px,var(--bg) 98%,transparent 100%) 0 0/120px 70px repeat-x}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(180px 180px at 12% 20%,rgb(255 255 255 / .22),transparent 70%),radial-gradient(240px 240px at 88% 70%,rgb(142 26 74 / .22),transparent 70%)}
+.hero__logo img{width:min(100%,460px)}
+.hero h1{font-weight:400;font-size:clamp(2.6rem,6.5vw,5.4rem)}
+.hero__sub{font-size:1.2rem}
+.block__h{font-weight:400;font-size:clamp(2rem,4.5vw,3.4rem);display:inline-block;background:var(--accent);color:#fff;padding:.05em .7em .15em;border-radius:999px;transform:rotate(-1.5deg)}
+.recs{display:block;columns:3 270px;column-gap:20px}
+.rec{break-inside:avoid;margin-bottom:20px;width:100%;border:0;padding:24px 24px 20px;box-shadow:0 14px 0 -8px rgb(142 26 74 / .14);transform:rotate(var(--r,-1deg))}
+.rec[data-n="0"]{background:#eb815f;color:#4a0a26;--r:-1.4deg}
+.rec[data-n="1"]{background:#f8c4d4;--r:1.2deg;border-radius:30px 30px 30px 8px}
+.rec[data-n="2"]{background:#fff;--r:-.6deg;border-radius:30px 8px 30px 30px}
+.rec[data-n="3"]{background:#8e1a4a;color:#ffe9df;--r:1.6deg}
+.rec[data-n="4"]{background:#ffd9c7;--r:-1.1deg;border-radius:8px 30px 30px 30px}
+.rec:hover,.rec:focus-visible{transform:rotate(0) translateY(-6px)}
+.rec__no{display:none}
+.rec__title{font-family:var(--f-head);font-weight:400;font-size:1.7rem}
+.pill{background:rgb(255 255 255 / .55);color:#4a0a26;border:0}
+.rec[data-n="3"] .pill{background:rgb(255 255 255 / .16);color:#ffe9df}
+.vcard{border:8px solid #fff;border-bottom-width:14px;box-shadow:0 10px 24px -12px rgb(107 15 53 / .5);border-radius:14px;transform:rotate(1.4deg)}
+.vcard:nth-child(even){transform:rotate(-1.6deg)}
+.vcard:hover,.vcard:focus-visible{transform:rotate(0) translateY(-6px)}
+.shared a{border-radius:999px;background:#fff;border-color:transparent}
+.foot__brands a{background:#fff;border-color:transparent}

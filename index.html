@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أكاديمية أفق | منصة التدريب للموظفين</title>
+<meta name="description" content="منصة التدريب والتطوير لموظفي الشركة: مقاطع تدريبية ودلائل عمل وبوسترات وتقييمات ميدانية.">
+<meta name="color-scheme" content="dark light">
+<!-- محلي أولاً: الخطوط والأيقونات من CDN مؤقتاً، تُستضاف محلياً قبل النشر -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="أكاديمية أفق">
+      <span class="brand__mark" role="img" aria-label="شعار أفق"></span>
+      <span class="brand__name">أكاديمية أفق</span>
+    </a>
+    <nav class="nav__links" aria-label="الأقسام">
+      <a href="#brands">العلامات</a>
+      <a href="videos.html">المقاطع</a>
+      <a href="recipes.html">الريسيبي</a>
+      <a href="#paths">المسارات</a>
+      <a href="#journey">كيف تتعلم</a>
+      <a href="#roles">لمن المنصة</a>
+      <a href="#quiz">اختبر نفسك</a>
+    </nav>
+    <div class="nav__act">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="تبديل الوضع">
+        <i class="ph ph-moon" id="themeIcon"></i>
+      </button>
+      <a class="btn btn--primary btn--sm magnetic" href="#paths">ابدأ التعلم</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. HERO: تقسيم غير متماثل -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <h1 class="reveal">تعلّم بإتقان.<br><em>طبّق بثقة.</em></h1>
+        <p class="hero__sub reveal" style="--d:.08s">مقاطع تدريبية ودلائل عمل وتقييمات ميدانية لكل موظف، في مكان واحد.</p>
+        <div class="hero__cta reveal" style="--d:.16s">
+          <a class="btn btn--primary magnetic" href="#paths">ابدأ التعلم <i class="ph ph-arrow-left"></i></a>
+          <a class="btn btn--ghost magnetic" href="#journey">شاهد كيف تعمل</a>
+        </div>
+      </div>
+      <div class="wheel reveal" style="--d:.1s" id="brands">
+        <svg viewBox="0 0 600 600" role="group" aria-label="علامات أفق: اختر علامتك" id="wheelSvg"></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. المسارات: بطاقات متراصة لاصقة -->
+  <section class="paths" id="paths">
+    <div class="wrap">
+      <h2 class="h2 reveal">أربعة مسارات. هدف واحد.</h2>
+      <p class="lead reveal">كل ما يحتاجه الموظف ليتقن عمله، مرتب بحسب ما يفعله يومياً.</p>
+    </div>
+    <div class="wrap stack">
+      <article class="card stack__card spot" style="--i:0">
+        <div class="card__txt">
+          <i class="ph ph-play-circle card__ic"></i>
+          <h3>مقاطع تدريبية</h3>
+          <p>دروس قصيرة بالفيديو تشرح الخطوات كما تُنفَّذ فعلاً في الفرع.</p>
+          <a class="link" href="videos.html">تصفح المقاطع</a>
+        </div>
+        <img src="assets/photos/clips.jpg" alt="يد تمسك تابلت يعرض مقطعاً تدريبياً بزر تشغيل" width="1100" height="730">
+      </article>
+      <article class="card stack__card spot" style="--i:1">
+        <div class="card__txt">
+          <i class="ph ph-book-open-text card__ic"></i>
+          <h3>الريسيبي والدلائل</h3>
+          <p>مقادير وخطوات وتحضير موحّد، يرجع له الموظف في أي وقت.</p>
+          <a class="link" href="recipes.html">افتح الدليل</a>
+        </div>
+        <img class="crop-hands" src="assets/photos/recipes.jpg" alt="يدا رجل تكتبان في دفتر وصفات" width="1100" height="730">
+      </article>
+      <article class="card card--wide stack__card spot" style="--i:2">
+        <div class="card__txt">
+          <i class="ph ph-image-square card__ic"></i>
+          <h3>البوسترات</h3>
+          <p>مرجع بصري سريع للمعايير والخطوات، جاهز للطباعة والعرض في الفرع.</p>
+          <a class="link" href="#">شاهد البوسترات</a>
+        </div>
+        <img src="assets/photos/posters.jpg" alt="بوسترات تدريبية مثبتة على جدار: خطوات تحضير اللاتيه والنظافة وخدمة العميل" width="1100" height="730">
+      </article>
+      <article class="card card--wide card--board stack__card spot" style="--i:3">
+        <div class="card__txt">
+          <i class="ph ph-clipboard-text card__ic"></i>
+          <h3>تقييم الزيارات</h3>
+          <p>ملاحظات المدرب بعد كل زيارة للفرع، مع نقاط القوة وما يحتاج تطويراً.</p>
+          <a class="link" href="#">اعرض تقييماتي</a>
+        </div>
+        <img src="assets/photos/visits.jpg" alt="مدرب يمسك لوح تقييم بيده ويكتب ملاحظاته" width="1100" height="730">
+      </article>
+    </div>
+  </section>
+
+  <!-- 3. الرحلة: خط تقدم يُرسم مع التمرير -->
+  <section class="journey" id="journey">
+    <div class="wrap journey__grid">
+      <div class="journey__head">
+        <h2 class="h2 reveal">من أول مقطع إلى أول تقييم</h2>
+        <p class="lead reveal">ثلاث خطوات واضحة، ويرى الموظف تقدمه في كل مرحلة.</p>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__dot"><i class="ph ph-eye"></i></span>
+          <div><h3>شاهد</h3><p>ابدأ بالمقطع التدريبي المخصص لدورك، وراجع الدليل المرافق له.</p></div>
+        </li>
+        <li class="step reveal">
+          <span class="step__dot"><i class="ph ph-hand-pointing"></i></span>
+          <div><h3>طبّق</h3><p>نفّذ ما تعلمته في الفرع، واحتفظ بالبوستر المناسب أمامك.</p></div>
+        </li>
+        <li class="step reveal">
+          <span class="step__dot"><i class="ph ph-seal-check"></i></span>
+          <div><h3>تقيّم</h3><p>يزورك المدرب ويسجل تقييمه، وتصلك الملاحظات لتتطور أكثر.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 4. الأدوار: تبويبات تفاعلية -->
+  <section class="roles" id="roles">
+    <div class="wrap">
+      <h2 class="h2 reveal">منصة لكل من يتعلم ويُعلّم</h2>
+      <div class="tabs reveal" role="tablist" aria-label="اختر دورك">
+        <button class="tab is-on" role="tab" aria-selected="true" aria-controls="p-emp" id="t-emp" type="button">الموظف</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-mgr" id="t-mgr" type="button" tabindex="-1">مدير الفرع</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-area" id="t-area" type="button" tabindex="-1">مدير المنطقة</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-trn" id="t-trn" type="button" tabindex="-1">المدرب</button>
+      </div>
+      <div class="panels">
+        <div class="panel is-on" role="tabpanel" id="p-emp" aria-labelledby="t-emp">
+          <div class="panel__txt">
+            <h3>تعلّم في وقتك</h3>
+            <p>مقاطع قصيرة تشاهدها من هاتفك، ودليل تعود إليه عند الحاجة، وتقييم يوضح لك أين تتقدم.</p>
+          </div>
+          <img src="assets/photos/role-employee.jpg" alt="يد تمسك كوب قهوة بفن اللاتيه" loading="lazy" width="1100" height="730">
+        </div>
+        <div class="panel" role="tabpanel" id="p-mgr" aria-labelledby="t-mgr" hidden>
+          <div class="panel__txt">
+            <h3>اعرف مستوى فريقك</h3>
+            <p>اطلع على تقييمات فريق فرعك، وحدد من يحتاج دعماً قبل أن تظهر المشكلة.</p>
+          </div>
+          <img src="assets/photos/role-branch.jpg" alt="يدان تعملان على لابتوب يعرض مؤشرات الأداء" loading="lazy" width="1100" height="730">
+        </div>
+        <div class="panel" role="tabpanel" id="p-area" aria-labelledby="t-area" hidden>
+          <div class="panel__txt">
+            <h3>انظر للمنطقة كلها</h3>
+            <p>تابع تقييمات فروع منطقتك وقارن بينها، وحدد أين تركّز التدريب أولاً.</p>
+          </div>
+          <img src="assets/photos/role-area.jpg" alt="يد تثبت دبوساً أحمر على خريطة مدينة" loading="lazy" width="1100" height="730">
+        </div>
+        <div class="panel" role="tabpanel" id="p-trn" aria-labelledby="t-trn" hidden>
+          <div class="panel__txt">
+            <h3>قيّم وتابع</h3>
+            <p>سجّل تقييم كل زيارة، وتابع تطور كل موظف على مر الزيارات دون أوراق.</p>
+          </div>
+          <img src="assets/photos/role-trainer.jpg" alt="لوحة بيضاء يرسم عليها مدرب بخطوات الشرح" loading="lazy" width="1100" height="730">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. اختبر نفسك: تفاعل مصغر -->
+  <section class="quiz" id="quiz">
+    <div class="wrap quiz__in">
+      <div>
+        <h2 class="h2 reveal">جرّب سؤالاً سريعاً</h2>
+        <p class="lead reveal">هكذا تبدو أسئلة التقييم داخل المنصة.</p>
+      </div>
+      <form class="qcard reveal" id="quizForm" novalidate>
+        <fieldset>
+          <legend>أول ما تفعله عند استقبال ضيف غاضب؟</legend>
+          <label class="opt"><input type="radio" name="q" value="a"><span>أقاطعه وأشرح له الموقف</span></label>
+          <label class="opt"><input type="radio" name="q" value="b"><span>أستمع له حتى ينهي كلامه ثم أعتذر</span></label>
+          <label class="opt"><input type="radio" name="q" value="c"><span>أحوّله مباشرة إلى المدير</span></label>
+        </fieldset>
+        <p class="qmsg" id="quizMsg" role="status" aria-live="polite"></p>
+        <button class="btn btn--primary magnetic" type="submit">تحقق من إجابتي</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 6. دعوة ختامية -->
+  <section class="final">
+    <div class="wrap final__in reveal">
+      <h2 class="h2">جاهز لتبدأ؟</h2>
+      <a class="btn btn--primary btn--lg magnetic" href="#paths">ادخل المنصة <i class="ph ph-arrow-left"></i></a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span class="brand__name">أكاديمية أفق</span>
+    <span class="foot__note">قسم التدريب والتطوير</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

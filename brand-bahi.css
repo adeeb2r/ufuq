@@ -1,0 +1,28 @@
+/* BAHI بهي: فخم وزخرفي. عنابي غامق وذهبي، خط نسخ، إطارات مزدوجة، بطاقات قائمة وأقواس. */
+:root{--bg:#240308;--hero:#240308;--hero-ink:#f6e7c1;--ink:#f3e3bb;--muted:#c9a86a;--card:#34060d;--card-ink:#f3e3bb;--line:rgb(216 180 106 / .5);--accent:#d8b46a;--accent-ink:#2a0408;--radius:16px;--f-head:"Amiri","Readex Pro",serif;--f-body:"Amiri","Readex Pro",serif;--top-bg:#240308}
+body{font-size:1.08rem}
+.hero{border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.35;background:repeating-conic-gradient(from 45deg at 50% 50%,rgb(216 180 106 / .12) 0 25%,transparent 0 50%) 0 0/48px 48px}
+.hero::after{content:"";position:absolute;inset:14px;border:1px solid var(--line);box-shadow:inset 0 0 0 6px transparent,inset 0 0 0 7px var(--line);pointer-events:none}
+.hero__logo img{width:min(100%,380px);height:auto}
+.hero h1{font-weight:700;font-size:clamp(2.6rem,6vw,4.8rem);color:#f3d9a0}
+.counts b{color:#f3d9a0}
+.block{text-align:center}
+.block__h{display:inline-flex;align-items:center;gap:18px;font-weight:700;color:#f3d9a0}
+.block__h::before,.block__h::after{content:"";width:clamp(36px,10vw,120px);height:1px;background:linear-gradient(90deg,transparent,var(--accent))}
+.block__h::after{transform:scaleX(-1)}
+.recs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:22px;text-align:center}
+.rec{align-items:center;text-align:center;padding:34px 22px 26px;background:var(--card);border:1px solid var(--line);outline:1px solid var(--line);outline-offset:-8px;position:relative}
+.rec::before{content:"◆";position:absolute;top:-10px;left:50%;transform:translateX(-50%);color:var(--accent);font-size:.9rem;background:var(--bg);padding:0 8px}
+.rec:hover,.rec:focus-visible{background:#43090f}
+.rec__no{display:none}
+.rec__title{font-size:1.65rem;color:#f3d9a0}
+.rec__pills{justify-content:center}
+.pill{border-color:var(--line);color:#f3e3bb}
+.vids{justify-content:center;flex-wrap:wrap;overflow:visible}
+.vcard{border:2px solid var(--accent);border-radius:999px 999px 16px 16px;outline:1px solid var(--line);outline-offset:4px}
+.vcard__title{text-align:center;font-family:var(--f-head);font-size:1.05rem}
+.shared__in{justify-content:center}
+.shared a{border-color:var(--accent);border-radius:999px}
+.sheet__panel{outline:1px solid var(--line);outline-offset:-9px}
+.foot{border-top:1px solid var(--line)}

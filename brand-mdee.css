@@ -1,0 +1,26 @@
+/* M DEE: صناعي حاد. رمادي وأبيض، زوايا قائمة، خطوط سميكة، صفوف مرقمة. */
+:root{--bg:#1d1d1f;--hero:#555555;--hero-ink:#f5f5f5;--ink:#ededed;--muted:#a8a8ab;--card:#2a2a2c;--card-ink:#ededed;--line:rgb(255 255 255 / .24);--accent:#f5f5f5;--accent-ink:#1a1a1a;--radius:0;--f-head:"Archivo Black","Readex Pro",sans-serif}
+.top{background:#1d1d1f;border-bottom:3px solid #f5f5f5}
+.top__back,.top__links{letter-spacing:.04em}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:18px;background:repeating-linear-gradient(135deg,#f5f5f5 0 14px,transparent 14px 28px)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.8%,rgb(255 255 255 / .1) 50%,transparent 50.2%);background-size:12.5% 100%}
+.hero__logo img{width:min(100%,560px)}
+.hero h1{font-size:clamp(2rem,5vw,4rem);text-transform:uppercase;letter-spacing:-.01em}
+.counts b{font-size:clamp(2.6rem,5vw,4.2rem)}
+.block__h{display:inline-block;padding-bottom:10px;border-bottom:8px solid #f5f5f5;font-size:clamp(1.6rem,3.4vw,2.6rem)}
+/* ريسيبي: صفوف */
+.recs{display:block;border-bottom:2px solid var(--line)}
+.rec{display:grid;grid-template-columns:72px 1.3fr 1.5fr 96px;gap:20px;align-items:center;width:100%;padding:22px 8px;background:transparent;border:0;border-top:2px solid var(--line);border-radius:0}
+.rec:hover,.rec:focus-visible{transform:none;background:#f5f5f5;color:#1a1a1a;padding-inline:22px}
+.rec__no{font-family:var(--f-head);font-size:2rem;opacity:1;color:inherit}
+.rec__title{font-size:1.5rem;text-transform:uppercase}
+.rec__cat{text-transform:none;letter-spacing:.02em}
+.pill{border-radius:0;border-color:currentColor;font-family:ui-monospace,Consolas,monospace}
+.rec__meta{text-align:end;font-family:ui-monospace,Consolas,monospace;margin:0}
+/* مقاطع */
+.vcard{border:2px solid #f5f5f5}
+.vcard::before{content:"";position:absolute;z-index:2;inset:0 auto auto 0;width:14px;height:14px;background:#f5f5f5}
+.shared a{border-width:2px;border-radius:0;text-transform:uppercase;letter-spacing:.04em}
+.foot{border-top:3px solid #f5f5f5}
+.foot__brands a{border-radius:0}
+@media (max-width:820px){.rec{grid-template-columns:48px 1fr;gap:10px 14px}.rec__pills,.rec__meta{grid-column:2}.rec__meta{text-align:start}}

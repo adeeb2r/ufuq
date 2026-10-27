@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الريسيبي والدلائل | أكاديمية أفق</title>
+<meta name="description" content="دليل المقادير وخطوات التحضير الموحّد لموظفي أفق.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="css/recipes.css">
+<link rel="stylesheet" href="css/catmgr.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="back" href="index.html"><i class="ph ph-arrow-right"></i> الرئيسية</a>
+    <span class="bar__title">الريسيبي والدلائل</span>
+    <div class="bar__acts"><button class="add-btn add-btn--line" id="catBtn" type="button" hidden><i class="ph ph-tag"></i><span>الأقسام</span></button>
+    <button class="add-btn" id="addBtn" type="button" hidden><i class="ph ph-plus"></i><span>ريسيبي جديد</span></button></div>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <div class="wrap intro__in">
+      <div>
+        <h1>مقادير دقيقة.<br><span>نتيجة واحدة.</span></h1>
+        <p class="lead">دليل موحّد لكل مشروب: الكميات بالأرقام، والخطوات بالترتيب، ومقطع يشرحها.</p>
+      </div>
+      <div class="stats" aria-live="polite">
+        <div><b id="statRecipes">0</b><span>ريسيبي</span></div>
+        <div><b id="statCats">0</b><span>أقسام</span></div>
+      </div>
+    </div>
+    <div class="ruler" aria-hidden="true"></div>
+  </section>
+
+  <section class="tools">
+    <div class="wrap tools__in">
+      <label class="search"><i class="ph ph-magnifying-glass"></i><input id="q" type="search" placeholder="ابحث باسم المشروب أو المكوّن" autocomplete="off"></label>
+      <div class="chips" id="catChips" role="group" aria-label="القسم"></div>
+    </div>
+  </section>
+
+  <section class="grid-wrap">
+    <div class="wrap">
+      <div class="grid" id="grid"><p class="empty">جاري تحميل الريسيبي</p></div>
+    </div>
+  </section>
+</main>
+
+<!-- عرض الريسيبي -->
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="تفاصيل الريسيبي" hidden>
+  <div class="sheet__panel">
+    <button class="sheet__close" id="sClose" type="button" aria-label="إغلاق"><i class="ph ph-x"></i></button>
+    <div class="sheet__head">
+      <p class="tag" id="sTag"></p>
+      <h2 id="sTitle"></h2>
+      <p class="sum" id="sSum"></p>
+    </div>
+    <div class="sheet__body">
+      <section>
+        <h3>المقادير</h3>
+        <ul class="ings" id="sIngs"></ul>
+      </section>
+      <section>
+        <h3>الخطوات</h3>
+        <ol class="steps" id="sSteps"></ol>
+        <div class="note" id="sNote" hidden></div>
+      </section>
+    </div>
+    <div class="sheet__foot">
+      <button class="btn" id="sVideo" type="button" hidden><i class="ph ph-play"></i> شاهد المقطع</button>
+      <button class="btn btn--line" id="sEdit" type="button" hidden><i class="ph ph-pencil-simple"></i> تعديل</button>
+    </div>
+    <div class="vbox" id="vbox" hidden><video id="sVid" controls playsinline preload="none"></video></div>
+  </div>
+</div>
+
+<!-- نموذج الإضافة والتعديل -->
+<div class="sheet" id="form" role="dialog" aria-modal="true" aria-label="ريسيبي" hidden>
+  <form class="sheet__panel fpanel" id="rf" novalidate>
+    <button class="sheet__close" id="fClose" type="button" aria-label="إغلاق"><i class="ph ph-x"></i></button>
+    <h2 id="fHead">ريسيبي جديد</h2>
+    <label>اسم المشروب<input id="rTitle" maxlength="120" autocomplete="off" required></label>
+    <div class="row">
+      <label>القسم<select id="rCat"></select></label>
+      <label>العلامة<select id="rBrand"></select></label>
+    </div>
+    <label>مقطع مرتبط (اختياري)<select id="rVideo"></select></label>
+    <label>وصف قصير (اختياري)<input id="rSum" maxlength="300" autocomplete="off"></label>
+    <fieldset>
+      <legend>المقادير</legend>
+      <div id="rIngs" class="ing-rows"></div>
+      <button type="button" class="btn btn--line btn--sm" id="addIng"><i class="ph ph-plus"></i> مكوّن</button>
+    </fieldset>
+    <label>الخطوات (كل خطوة في سطر)<textarea id="rSteps" rows="6" maxlength="4000"></textarea></label>
+    <label>ملاحظات (اختياري)<textarea id="rNotes" rows="2" maxlength="1000"></textarea></label>
+    <datalist id="units"><option value="مل"><option value="جم"><option value="قطعة"><option value="ملعقة"><option value="كوب"><option value="أونصة"><option value="شوت"></datalist>
+    <div class="factions">
+      <button class="btn" type="submit">حفظ <i class="ph ph-check"></i></button>
+      <button class="btn btn--danger" id="rDel" type="button" hidden><i class="ph ph-trash"></i> حذف</button>
+      <span class="msg" id="rMsg" role="status" aria-live="polite"></span>
+    </div>
+  </form>
+</div>
+
+<script src="js/categories.js"></script>
+<script src="js/recipes.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>المقاطع التدريبية | أكاديمية أفق</title>
+<meta name="description" content="مكتبة المقاطع التدريبية لموظفي أفق: مشروبات باردة وساخنة ودريب وبقية الأقسام.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600&family=Reem+Kufi:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="css/videos.css">
+<link rel="stylesheet" href="css/catmgr.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="back" href="index.html"><i class="ph ph-arrow-right"></i> الرئيسية</a>
+    <span class="bar__title">المقاطع التدريبية</span>
+    <div class="bar__acts"><button class="edit-btn" id="catBtn" type="button" hidden><i class="ph ph-tag"></i><span>الأقسام</span></button>
+    <button class="edit-btn" id="editBtn" type="button" hidden><i class="ph ph-pencil-simple"></i><span>وضع التسمية</span></button></div>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <div class="wrap intro__in">
+      <h1>شاهد. تعلّم.<br><span>أتقن.</span></h1>
+      <div class="stats" aria-live="polite">
+        <div><b id="statTotal">0</b><span>مقطع</span></div>
+        <div><b id="statCats">0</b><span>أقسام</span></div>
+        <div id="statNamedBox" hidden><b id="statUnnamed">0</b><span>بانتظار اسم</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="filters">
+    <div class="wrap filters__in">
+      <div class="chips" id="catChips" role="group" aria-label="القسم"></div>
+      <div class="chips chips--brand" id="brandChips" role="group" aria-label="العلامة"></div>
+    </div>
+  </section>
+
+  <section class="rails" id="rails" aria-label="المقاطع">
+    <div class="wrap"><p class="empty" id="loading">جاري تحميل المقاطع</p></div>
+  </section>
+</main>
+
+<!-- مشغل المقطع -->
+<div class="player" id="player" role="dialog" aria-modal="true" aria-label="مشغل المقطع" hidden>
+  <button class="player__close" id="pClose" type="button" aria-label="إغلاق"><i class="ph ph-x"></i></button>
+  <button class="player__nav player__nav--prev" id="pPrev" type="button" aria-label="المقطع السابق"><i class="ph ph-caret-right"></i></button>
+  <button class="player__nav player__nav--next" id="pNext" type="button" aria-label="المقطع التالي"><i class="ph ph-caret-left"></i></button>
+  <div class="player__grid">
+    <div class="player__stage"><video id="pVideo" controls playsinline preload="metadata"></video></div>
+    <aside class="player__info">
+      <p class="tag" id="pTag"></p>
+      <h2 id="pTitle"></h2>
+      <p class="desc" id="pDesc"></p>
+      <form class="form" id="pForm" hidden>
+        <label>اسم المقطع<input id="fTitle" maxlength="160" autocomplete="off"></label>
+        <label>وصف قصير (اختياري)<textarea id="fDesc" rows="3" maxlength="600"></textarea></label>
+        <div class="row">
+          <label>العلامة<select id="fBrand"></select></label>
+          <label>القسم<select id="fCat"></select></label>
+        </div>
+        <label>لقطة الغلاف <span class="cv-t" id="fCoverT"></span><input type="range" id="fCover" min="0" max="10" step="0.1" value="0"></label>
+        <div class="row row--act">
+          <button class="btn" type="submit">حفظ <i class="ph ph-check"></i></button>
+          <button class="btn btn--ghost" id="fNext" type="button">حفظ والتالي <i class="ph ph-arrow-left"></i></button>
+        </div>
+        <p class="msg" id="fMsg" role="status" aria-live="polite"></p>
+      </form>
+    </aside>
+  </div>
+</div>
+
+<script src="js/categories.js"></script>
+<script src="js/videos.js"></script>
+</body>
+</html>

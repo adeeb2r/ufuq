@@ -1,0 +1,23 @@
+/* MLT: دافئ وترابي. زيتوني وكريمي، أقواس هندسية، بطاقات بشكل قوس، أرقام كبيرة هادئة. */
+:root{--bg:#434a39;--hero:#5b644f;--hero-ink:#ece7d9;--ink:#ece7d9;--muted:#bcc2ab;--card:#4f573f;--card-ink:#ece7d9;--line:rgb(236 231 217 / .25);--accent:#ece7d9;--accent-ink:#394030;--radius:26px;--f-head:"Tajawal","Readex Pro",sans-serif;--f-body:"Tajawal","Readex Pro",sans-serif;--top-bg:#434a39}
+body{font-size:1.05rem}
+.hero{padding-bottom:30px}
+.hero::before{content:"";position:absolute;inset:auto auto -120px -80px;width:360px;height:360px;border-radius:50%;border:2px solid var(--line)}
+.hero::after{content:"";position:absolute;inset:-100px -60px auto auto;width:300px;height:300px;border-radius:50%;background:rgb(236 231 217 / .07)}
+.hero__logo{display:grid;place-items:center}
+.hero__logo img{width:min(100%,420px)}
+.hero h1{font-weight:800;font-size:clamp(2.4rem,5.6vw,4.4rem)}
+.counts b{font-weight:800}
+.block__h{font-weight:800;position:relative;padding-inline-start:20px}
+.block__h::before{content:"";position:absolute;inset-block:.2em;inset-inline-start:0;width:6px;border-radius:6px;background:var(--accent)}
+.recs{grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:22px}
+.rec{position:relative;align-items:center;text-align:center;border-radius:200px 200px var(--radius) var(--radius);padding:76px 22px 26px;background:var(--card);border-color:var(--line);min-height:300px}
+.rec:hover,.rec:focus-visible{background:#ece7d9;color:#394030}
+.rec:hover .pill,.rec:focus-visible .pill{border-color:rgb(57 64 48 / .35)}
+.rec__no{font-size:2.4rem;font-weight:800;opacity:.4;position:absolute;top:22px;left:0;right:0;text-align:center}
+.rec__title{font-size:1.5rem;font-weight:700}
+.rec__pills{justify-content:center}
+.vcard{border-radius:120px 120px var(--radius) var(--radius);border-color:var(--line)}
+.vcard__title{text-align:center;padding-bottom:16px}
+.shared a{border-radius:999px}
+.foot__brands a{border-radius:999px}
